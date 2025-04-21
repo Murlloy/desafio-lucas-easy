@@ -24,16 +24,21 @@ p {
     font-size: 20px;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 110px;
+    padding: 30px 2%;
 }
 
 header nav {
     display: flex;
-    gap: 75px;
+    gap: 10%;
 }
 
 .nav-icons {
@@ -274,8 +279,8 @@ main button {
 .inspiration {
     display: flex;
     justify-content: center;
-    gap: 12%;
-    padding: 44px 0px 100px 44px;
+    gap: 2%;
+    padding: 44px 0px 5% 44px;
     height: 700px;
     align-items: center;
     background-color: #FCF8F3;
@@ -352,6 +357,17 @@ main button {
 .inspiration-end {
     position: relative;
     height: 100%;
+    display: flex;
+}
+
+.inspiration-img {
+    width: auto;
+    height: 60%;
+    display: block;
+}
+
+.inspiration-end .seta {
+    width: 15px;
 }
 
 .inspiration-seta {
@@ -400,46 +416,61 @@ main button {
     border-radius: 50%;
 }
 
+footer form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .furniture {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    padding: 50px;
+    padding: 50px 0px;
+    height: 1000px;
 }
 
 .furniture-images {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 50px;
-    height: 100%;
+    margin: 0 auto;
 }
 
-.furniture-images div {
+.furniture-images section > div img {
+    flex: 1 1 200px;
+}
+
+.furniture-images section {
     display: flex;
-    align-items: start;
-    justify-content: start;
-    gap: 100px;
+    flex-direction: column;
 }
 
-.furniture-images section img {
-    margin: 20px;
+.furniture-images section div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: end;
+    column-gap: 2%;
+    align-self: flex-end;
+    margin: 2%;
 }
+
+
 
 .footer {
     display: flex;
     flex-direction: column;
-    padding: 48px 100px;
+    padding: 48px 5%;
     border-top: 1px solid rgba(0, 0, 0, 0.075);
+    min-width: 800px;
 }
 
 .footer section {
     display: flex;
     justify-content: space-between;
-    padding-right: 200px;
+    gap: 30px;
     align-items: start;
 }
 
@@ -502,4 +533,14 @@ main button {
     border: none;
     border-bottom: black 1PX SOLID;
     font-size: 16px;
+}
+
+@media (max-width: 1240px){
+    .inspiration-img {
+        display: none;
+    }
+
+    .group-bolinha {
+        display: none;
+    }
 }
