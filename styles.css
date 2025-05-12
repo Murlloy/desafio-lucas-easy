@@ -41,6 +41,20 @@ header nav {
     gap: 10%;
 }
 
+header article {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+header article section {
+    display: flex;
+    width: 40px;
+    height: 3px;
+    background-color: #3A3A3A;
+}
+
 .nav-icons {
     display: flex;
     gap: 47px;
@@ -48,7 +62,6 @@ header nav {
 
 main {
     background-image: url(imgs/banner.png);
-    
     display: flex;
     align-items: center;
     justify-content: end;
@@ -86,8 +99,16 @@ main button {
     background-color: #B88E2F;
     font-size: 16px;
     font-weight: bolder;
-    border: 1px solid transparent;
+    border: 3px solid transparent;
     margin-top: 20px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+main button:hover {
+    background-color: transparent;
+    color: #B88E2F;
+    border: 3px solid #B88E2F;
 }
 
 .browse {
@@ -239,14 +260,16 @@ main button {
     display: flex;
     justify-content: center;
     width: 100%;
+    gap: 0px;
     align-items: center;
 }
 
 .product-hover div p {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 5px;
     color: white;
+    font-size: 14px;
 }
 
 .product:hover .product-hover {
@@ -256,6 +279,8 @@ main button {
     align-items: center;
     gap: 30px;
     color: white;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .our-products-button {
@@ -543,4 +568,84 @@ footer form {
     .group-bolinha {
         display: none;
     }
+}
+
+@media (max-width: 800px) {
+    header article {
+        display: flex;
+    }
+
+    header nav, .nav-icons {
+        display: none;
+    }
+
+    header nav {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        right: 0;
+        padding: 40px;
+        background-color: white;
+    }
+
+    header nav.show {
+        display: flex;
+    }
+
+    .browse {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .browse-itens {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .inspiration {
+        height: auto;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .inspiration-img {
+        height: 100%;
+    }
+
+    .inspiration-seta {
+        position: relative;
+        top: 0;
+        right: 50%;
+    }
+
+    .footer {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .footer section {
+        flex-direction: column;
+        min-width: 100%;
+        align-items: start;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .footer article {
+        min-width: 100%;
+    }
+
+    .footer article form {
+        min-width: 80%;
+    }
+
+    .footer article form input:first-of-type {
+        min-width: 60%;
+    }
+
 }
