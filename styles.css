@@ -645,7 +645,14 @@ footer form {
 
     .footer article form input:first-of-type {
         min-width: 60%;
-        
+    }
+
+    .inspiration {
+        padding: 50px 5%;
+    }
+
+    .inspiration-center {
+        max-width: 100%;
     }
 
 }
